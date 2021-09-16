@@ -8,6 +8,9 @@ export class ShopCta extends LitElement {
         padding: 25px;
         color: var(--shop-cta-text-color, #000);
       }
+      .button1{
+        background-color: #4CAF50;
+      }
     `;
   }
 
@@ -25,6 +28,7 @@ export class ShopCta extends LitElement {
 
   render() {
     return html`
+      <button type="button" name="shop-button" class="button1">Shop</button>
     `;
   }
 }
