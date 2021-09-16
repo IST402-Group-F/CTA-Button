@@ -25,7 +25,6 @@ export class ShopCta extends LitElement {
 
   render() {
     return html`
-      
     `;
   }
 }

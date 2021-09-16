@@ -1,0 +1,1 @@
+9/16/2021 - created boilerplate in class as well as group repo, set meeting time, began initial steps for shop button
