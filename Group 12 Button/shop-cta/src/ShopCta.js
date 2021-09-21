@@ -10,6 +10,8 @@ export class ShopCta extends LitElement {
       }
       .button1{
         background-color: #4CAF50;
+        border radius: 
+        
       }
     `;
   }
@@ -28,7 +30,8 @@ export class ShopCta extends LitElement {
 
   render() {
     return html`
-      <button type="button" name="shop-button" class="button1">Shop</button>
+      <!--html button tag that also is a link and opens website in new tab-->
+      <button type="button" name="shop-button" class="button1" onclick="window.open('https://nike.com', '_blank')">Shop</button>
     `;
   }
 }
