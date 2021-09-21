@@ -8,10 +8,22 @@ export class ShopCta extends LitElement {
         padding: 25px;
         color: var(--shop-cta-text-color, #000);
       }
-      .button1{
-        background-color: #4CAF50;
-        border radius: 
-        
+      .button{
+        background-color: #efefef;
+        border-radius: 25px;
+        padding: 8px 20px;
+      }
+      .button:hover{
+        background-color: rgba(239, 239, 239, 0.5);
+      }
+      .button:disabled{
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+      .button:focus{
+        background-color: #D7D7D7;
+        font-weight: bold;
+        outline: none;
       }
     `;
   }
@@ -31,7 +43,7 @@ export class ShopCta extends LitElement {
   render() {
     return html`
       <!--html button tag that also is a link and opens website in new tab-->
-      <button type="button" name="shop-button" class="button1" onclick="window.open('https://nike.com', '_blank')">Shop</button>
+      <button type="button" name="shop-button" class="button" onclick="window.open('https://nike.com', '_blank')">Shop</button>
     `;
   }
 }
