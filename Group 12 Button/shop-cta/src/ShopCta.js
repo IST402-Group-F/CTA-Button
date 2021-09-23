@@ -17,13 +17,14 @@ export class ShopCta extends LitElement {
       }
       .button:hover{
         background-color: rgba(239, 239, 239, 0.5);
+        font-weight: bold;
       }
       .button:disabled{
         opacity: 0.5;
         cursor: not-allowed;
       }
       .button:focus{
-        background-color: #D7D7D7;
+        background-color: rgba(239, 239, 239, 0.5);
         font-weight: bold;
         outline: none;
       }
@@ -32,12 +33,17 @@ export class ShopCta extends LitElement {
 
   static get properties() {
     return {
-
+      link: {type: String},
+      disabled: {type: Boolean},
+      icon: {type: Boolean}
     };
   }
 
   constructor() {
     super();
+    this.link = "https://nike.com";
+    this.disabled = false;
+    this.icon = false;
   }
 
   
@@ -45,7 +51,7 @@ export class ShopCta extends LitElement {
   render() {
     return html`
       <!--html button tag that also is a link and opens website in new tab-->
-      <button type="button" name="shop-button" class="button" onclick="window.open('https://nike.com', '_blank')">Shop</button>
+      <button type="button" name="shop-button" class="button" onclick="window.open('${this.link}', '_blank')">Shop</button>
       <simple-icon-lite icon="shopping-cart"></simple-icon-lite>
       `;
   }
