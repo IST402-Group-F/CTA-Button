@@ -1,4 +1,6 @@
 import { html, css, LitElement } from 'lit';
+import "@lrnwebcomponents/simple-icon/lib/simple-icon-lite.js";
+import "@lrnwebcomponents/simple-icon/lib/simple-icons.js";
 
 export class ShopCta extends LitElement {
   static get styles() {
@@ -44,6 +46,7 @@ export class ShopCta extends LitElement {
     return html`
       <!--html button tag that also is a link and opens website in new tab-->
       <button type="button" name="shop-button" class="button" onclick="window.open('https://nike.com', '_blank')">Shop</button>
-    `;
+      <simple-icon-lite icon="shopping-cart"></simple-icon-lite>
+      `;
   }
 }
