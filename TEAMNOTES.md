@@ -4,3 +4,5 @@
 
 9/21/2021 - Attendance - What We Learned: We need to pay more attention to the demo file, some different css tricks
                          Next Steps: Adjust button states, improve usability/reusability and make it more open-ended
+
+9/23/2021 - In class work: Both worked on adding the simple icon library into our code and played around with putting the desired icon into our project (shopping-cart);
