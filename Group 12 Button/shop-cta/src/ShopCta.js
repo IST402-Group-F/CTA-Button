@@ -35,7 +35,9 @@ export class ShopCta extends LitElement {
     return {
       link: {type: String},
       disabled: {type: Boolean},
-      icon: {type: Boolean}
+      iconEnable: {type: Boolean},
+      icon: {type: String},
+      title: {type: String}
     };
   }
 
@@ -43,7 +45,9 @@ export class ShopCta extends LitElement {
     super();
     this.link = "https://nike.com";
     this.disabled = false;
-    this.icon = false;
+    this.iconEnable = false;
+    this.title = "Shop";
+    this.icon = "shopping-cart";
   }
 
   
@@ -51,8 +55,13 @@ export class ShopCta extends LitElement {
   render() {
     return html`
       <!--html button tag that also is a link and opens website in new tab-->
-      <button type="button" name="shop-button" class="button" onclick="window.open('${this.link}', '_blank')">Shop</button>
-      <simple-icon-lite icon="shopping-cart"></simple-icon-lite>
+      
+      <button type="button" name="shop-button" class="button" onclick="window.open('${this.link}', '_blank')">
+      ${this.iconEnable ?
+      html``: html `<simple-icon-lite icon="${this.icon}"></simple-icon-lite>`
+      }
+      ${this.title}
+      </button>
       `;
   }
 }
