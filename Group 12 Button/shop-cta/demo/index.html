@@ -15,10 +15,13 @@
     import { html, render } from 'lit';
     import '../shop-cta.js';
 
+    
     const title = 'Shop';
+    const icon = "shopping-cart";
+    const iconEnable = true;
     render(
       html`
-        <shop-cta .title=${title}>
+        <shop-cta .title=${title} .icon=${icon} .iconEnable=${iconEnable}>
           some light-dom
         </shop-cta>
       `,

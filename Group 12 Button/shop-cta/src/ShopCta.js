@@ -33,18 +33,16 @@ export class ShopCta extends LitElement {
 
   static get properties() {
     return {
-      link: {type: String},
-      disabled: {type: Boolean},
-      iconEnable: {type: Boolean},
-      icon: {type: String},
-      title: {type: String}
+      link: {type: String, reflect: true},
+      iconEnable: {type: Boolean, reflect: true},
+      icon: {type: String, reflect: true},
+      title: {type: String, reflect: true}
     };
   }
 
   constructor() {
     super();
     this.link = "https://nike.com";
-    this.disabled = false;
     this.iconEnable = false;
     this.title = "Shop";
     this.icon = "shopping-cart";
@@ -58,7 +56,7 @@ export class ShopCta extends LitElement {
       
       <button type="button" name="shop-button" class="button" onclick="window.open('${this.link}', '_blank')">
       ${this.iconEnable ?
-      html``: html `<simple-icon-lite icon="${this.icon}"></simple-icon-lite>`
+      html`<simple-icon-lite icon="${this.icon}"></simple-icon-lite>`: html ``
       }
       ${this.title}
       </button>
