@@ -14,6 +14,7 @@ export class ShopCta extends LitElement {
         background-color: #efefef;
         border-radius: 25px;
         padding: 8px 20px;
+        transition: all 0.3s ease;
       }
       .button:hover{
         background-color: rgba(239, 239, 239, 0.5);
@@ -36,7 +37,8 @@ export class ShopCta extends LitElement {
       link: {type: String, reflect: true},
       iconEnable: {type: Boolean, reflect: true},
       icon: {type: String, reflect: true},
-      title: {type: String, reflect: true}
+      title: {type: String, reflect: true},
+      isDisabled: {type: Boolean, reflect: true}
     };
   }
 
@@ -46,6 +48,7 @@ export class ShopCta extends LitElement {
     this.iconEnable = false;
     this.title = "Shop";
     this.icon = "shopping-cart";
+    this.isDisabled = false;
   }
 
   
@@ -54,7 +57,7 @@ export class ShopCta extends LitElement {
     return html`
       <!--html button tag that also is a link and opens website in new tab-->
       
-      <button type="button" name="shop-button" class="button" onclick="window.open('${this.link}', '_blank')">
+      <button ?disabled=${this.isDisabled} type="button" name="shop-button" class="button" onclick="window.open('${this.link}', '_blank')">
       ${this.iconEnable ?
       html`<simple-icon-lite icon="${this.icon}"></simple-icon-lite>`: html ``
       }

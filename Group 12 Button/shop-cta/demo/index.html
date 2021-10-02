@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <style>
     body {
-      background: #575861;
+      background: #d6d7da;
     }
   </style>
 </head>
@@ -19,9 +19,19 @@
     const title = 'Shop';
     const icon = "shopping-cart";
     const iconEnable = true;
+    const isDisabled = false;
     render(
       html`
-        <shop-cta .title=${title} .icon=${icon} .iconEnable=${iconEnable}>
+        <shop-cta .title=${title} .icon=${icon} .iconEnable=${iconEnable} .isDisabled=${isDisabled}>
+          some light-dom
+        </shop-cta>
+        <shop-cta .title=${"No icon"} .icon=${icon} .iconEnable=${false} .isDisabled=${isDisabled}>
+          some light-dom
+        </shop-cta>
+        <shop-cta .title=${"Save"} .icon=${"save"} .iconEnable=${iconEnable} .isDisabled=${isDisabled}>
+          some light-dom
+        </shop-cta>
+        <shop-cta .title=${"Disabled"} .icon=${icon} .iconEnable=${iconEnable} .isDisabled=${true}>
           some light-dom
         </shop-cta>
       `,
