@@ -15,3 +15,5 @@ DIFFERENCES: we have icon able to be enabled, their button does not work with ta
 What we would ideally implement: The box shadow because we think that it is nice stylistically 
 box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
           0 17px 50px 0 rgba(0, 0, 0, 0.19);
+
+10/2/2021 - Group (Liam, Liz, Julian) met for 2-3 hours to work on figuring out Storybook and completing steps for button
